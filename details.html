@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Required Data Page</title>
+<style>
+body{
+background-color: silver;
+background-repeat:round;
+background-size: cover;
+background-attachment: fixed;
+align-content: center;
+
+}
+.button{
+
+border: none;
+background-color: purple;
+padding: 10px;
+size: 100;
+
+}
+.button1{
+border-radius: 12px;
+
+}
+</style>
+</head>
+<body >
+<h2 align="center">&nbsp;<u>Required Data</u></h2>
+<div align="right">
+<a  style="background-color: black;color: white; cursor: pointer;text-decoration:none;"class="button button1" href="requirements.html">Add Requirement</a><br><br><br>
+<a style="background-color: red; cursor: pointer;text-decoration: none;color:white;" class="button button1"  href="{% url 'login' %}">Logout</a>
+</div>
+<table width="80%" border="5" align="center" cellspacing="1" cellpadding="5" width="100px" >
+<tr>
+
+<th>Phone</th>
+<th>Picture</th>
+<th>Item</th>
+<th>Quantity</th>
+<th>Operation</th>
+
+</tr>
+
+{% for i in data %}
+<tr>
+
+
+<td>{{i.Phone}}</td>
+<td ><img src="{{ i.Img.url }}" width="700" height="200"></td>
+<td>{{i.Item}}</td>
+<td>{{i.Quantity}}</td>
+<td >
+<!a style="background-color:#1a0000; color: white; cursor: pointer;text-decoration:none;" class="button button1" href="{% url 'help2' i.id %}"><!/a>
+<input type="number" placeholder="Ex:-1">
+<input type="button" name="submit" value="submit">
+</td>
+</tr>
+{% endfor %}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -56,7 +56,7 @@ font-size:14px;left:1px;top:-45px;
 }
 .email{
 position:relative;
-left:200px;top:-37px;line-height:40px;border-radius:6px;padding:0 22px;font-size:16px;color:#555;
+left:200px;top:-47px;line-height:40px;border-radius:6px;padding:0 22px;font-size:16px;color:#555;
 }
 .code{
 position:relative;
@@ -89,6 +89,18 @@ left:200px;top:-37px;line-height:40px;border-radius:6px;padding:0 22px;font-size
 button:hover{
 background-color:#5390F5;
 }
+.button{
+
+border: none;
+background-color: purple;
+padding: 10px;
+size: 10;
+
+}
+.button1{
+border-radius: 12px;
+
+}
 </style>
 </head>
 <body>
@@ -97,10 +109,8 @@ background-color:#5390F5;
 <form>
 <div id="name">
 <h2 class="name">Name</h2>
-<input class="firstname" type="text" name="first_name"><br>
-<label class="firstlabel">First Name</label>
-<input class="lastname" type="text" name="last_name">
-<label class="firstlabel">Last Name</label>
+<input class="password" type="text" name="first_name" placeholder="First Name">
+<input class="password" type="text" name="last_name" placeholder="Last Name">
 </div>
 <h2 class="name">Email</h2>
 <input class="email" type="text" name="email">
@@ -118,9 +128,16 @@ background-color:#5390F5;
 <option value="Kilo Grams">Kilo Grams</option>
 <option value="Liters">Liters</option>
 </select>
-<div class="password">
+<div>
+<h2 class="name">Image</h2>
+<input class="password" type="file" id="img" name="img" accept="image/*">
+</div>
 
-<button type="submit">Submit</button>
+<br><br>
+<div class="password">
+<a  style="background-color:#3BAF9F;display:block;margin:10px 450px 10px 20px;
+text-align:center;border-radius:12px;border:2px solid #366473;padding:4px 25px 25px;
+outline:none;coloe:white;lcorsor:pointer;transition:0.25px;"  href="details.html">Submit</a>
 <button type="reset">Reset</button>
 </div>
 
